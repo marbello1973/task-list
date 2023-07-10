@@ -1,0 +1,33 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  color: #fff;
+  background: rgb(43, 5, 60);
+  background: -moz-linear-gradient(
+    270deg,
+    rgba(43, 5, 60, 1) 0%,
+    rgba(1, 5, 53, 1) 38%,
+    rgba(1, 6, 37, 1) 72%,
+    rgba(33, 5, 58, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    270deg,
+    rgba(43, 5, 60, 1) 0%,
+    rgba(1, 5, 53, 1) 38%,
+    rgba(1, 6, 37, 1) 72%,
+    rgba(33, 5, 58, 1) 100%
+  );
+  background: linear-gradient(
+    270deg,
+    rgba(43, 5, 60, 1) 0%,
+    rgba(1, 5, 53, 1) 38%,
+    rgba(1, 6, 37, 1) 72%,
+    rgba(33, 5, 58, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b053c",endColorstr="#21053a",GradientType=1);
+}
+:root {
+  --font-Oxygen: "Oxygen", sans-serif;
+  --font-Cinzel: "Cinzel", serif;
+  --color: #333333;
+}
