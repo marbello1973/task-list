@@ -1,0 +1,78 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2em;
+}
+
+.containerTask {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  width: 800px;
+  border: 1px solid #2b2b2b;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  margin: 1em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border: 1px solid #ccc;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top: 4px solid #ccc;
+  text-decoration: none;
+  list-style: none;
+  margin-top: 2em;
+  text-justify: distribute;
+  text-align: justify;
+  overflow: hidden;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+.card:hover {
+  border: 1px solid #272727;
+  border-top: 4px solid #1100ff;
+  transition: 0.5s;
+  cursor: pointer;
+  color: #ffffff;
+  transition: 0.5s;
+}
+
+.descripcion {
+  width: 130px;
+  height: 100px;
+  text-align: justify;
+  text-justify: distribute;
+  overflow: hidden;
+  max-width: 100%;
+  word-wrap: break-word;
+  font-size: 1.2em;
+}
+
+.title {
+  margin-top: 0.2em;
+  font-size: 1.3em;
+}
+
+.descritionTask {
+  align-items: center;
+  margin-top: 1em;
+  font-size: 17px;
+  font-family: var(--font-Cinzel);
+  color: #969696;
+}
+
+.descritionTask:hover {
+  color: #ffffff;
+  transition: 0.5s;
+}
