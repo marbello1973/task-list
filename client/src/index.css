@@ -26,6 +26,7 @@ body {
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b053c",endColorstr="#21053a",GradientType=1);
 }
+/* paleta de colores */
 :root {
   --font-Oxygen: "Oxygen", sans-serif;
   --font-Cinzel: "Cinzel", serif;
