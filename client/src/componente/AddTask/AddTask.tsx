@@ -2,19 +2,39 @@ import React, { useState } from "react";
 import styles from "./AddTask.module.css";
 import { TaskList } from "../TaskList/TaskList";
 
-const Addtask: React.FC = () => {
+interface AddProps {
+  tasksList: string[];
+}
+
+const Addtask: React.FC<AddProps> = () => {
   const [task, setTask] = useState<string>("");
   const [taskList, setTaskList] = useState<string[]>([]);
+  const [error, setError] = useState<string>("");
+  const [isInput, setIsInput] = useState<boolean>(true);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    addTask();
+    validar();
+    if (!error) {
+      addTask();
+    }
+  };
+
+  const validar = () => {
+    if ((!task || task === "") && taskList?.length === 0) {
+      setError("Ingrese una tarea");
+    } else if (!task || task === "") {
+      setError("Ingrese una tarea");
+    } else {
+      setError("");
+    }
   };
 
   const addTask = () => {
     setTaskList([...taskList, task]);
     setTask("");
   };
+
   return (
     <div className={styles.container}>
       <div className={styles.containerTask}>
@@ -24,11 +44,16 @@ const Addtask: React.FC = () => {
             className={styles.input}
             value={task}
             type="text"
-            onChange={(e) => setTask(e.target.value)}
+            onChange={(e) => {
+              setTask(e.target.value), setIsInput(e.target.value === "");
+            }}
           />
-          <button className={styles.buton}>Add</button>
+          <button className={styles.buton} disabled={isInput}>
+            Add
+          </button>
         </form>
       </div>
+      <TaskList tasksList={taskList} />
       {/* <div>
         <ul>
           {taskList?.map((el, i) => (
@@ -36,16 +61,6 @@ const Addtask: React.FC = () => {
           ))}
         </ul>
       </div> */}
-      <TaskList 
-        {taskList?.map((el) => {
-          return {
-            id: Math.random(),
-            name: el,
-            description: "description",
-            done: false,
-          };
-        })}
-      />
     </div>
   );
 };
