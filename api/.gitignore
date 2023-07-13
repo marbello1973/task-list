@@ -1,0 +1,6 @@
+#node mules
+node_modules
+
+#variabls de entorno 
+.env
+
